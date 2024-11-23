@@ -26,6 +26,17 @@ jobs:
       - name: Install LESS
         run: npm install -g less
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Fetch and reset to remote main
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
       - name: Compile LESS to CSS
         run: lessc interless.less interless.css
 
@@ -33,14 +44,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-
-          # Fetch and rebase
-          git fetch origin main
-          git checkout main
-          git rebase origin/main
-
           git add interless.css
           if ! git diff --cached --quiet; then
             git commit -m "Compile interless.less to interless.css"
