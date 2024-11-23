@@ -91,6 +91,7 @@ font-style:normal;}
 @media screen and (min-width:767px){
 p a em:after{
 content: "→"!important;
+font-family:var(--arrows)!important;
 position: absolute;
 opacity: 0;  
 transition: var(--trans);}
@@ -107,12 +108,9 @@ font-style:normal;}
 @media screen and (min-width:767px){
 p a em:after{
 content: "→";
-font-weight:400!important;
 position: absolute;
 opacity: 0;  
-transition: var(--trans);
-font-weight:500;}
-p a em:hover{}
+transition: var(--trans);}
 p a em:hover:after, h3 a em:hover:after{
 opacity: 1;
 margin-right: 30px;
