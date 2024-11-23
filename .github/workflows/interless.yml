@@ -5,9 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'interless.less'
-    paths-ignore:
-      - 'interless.css'
+      - 'interless.less'  # Trigger only when interless.less changes
 
 jobs:
   build:
