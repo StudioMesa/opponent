@@ -6,8 +6,6 @@ on:
       - main
     paths:
       - 'styles.less'
-    paths-ignore:
-      - 'styles.css'
 
 jobs:
   build:
