@@ -1,4 +1,4 @@
-/* Opponent CSS INTERLESS — Updated 04/20/2026 */
+/* Opponent CSS INTERLESS — Updated 05/22/2026 */
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -1170,7 +1170,6 @@ body .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
   display: none;
 }
 .tweak-blog-item-width-narrow blockquote {
-  border: unset!important;
   margin: 3rem 0;
   padding: 25px 40px;
   overflow: hidden!important;
